@@ -99,7 +99,9 @@ input[type="checkbox"]:focus,
 input[type="radio"]:focus{
 	border-color:transparent;
 }
-
+input[disabled]{
+	background-color:#f8f8f8;
+}
 /* table */
 table{
 	width:100%;
