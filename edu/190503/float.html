@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>float 기본 다지기</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			border:0;
+			color:#222;
+			font-size:13px;
+			box-sizing:border-box;
+		}
+		/* float : 좌/우 정렬 할 때 사용. float을 사용 함 과 동시에 공중에 떠 있는 상태.
+		left
+		right
+		*/
+		div{
+			width:100px;
+			height:100px;
+			background-color:darkolivegreen;
+			color:#fff;
+			font-size:16px;
+		}
+		/* 
+		자식 요소에 float이 사용이 된 경우 부모요소에 해제 시키는 방법
+		0. 부모요소에 height 부여.
+		1. float이 사용된 부모요소에 overflow 속성을 부여.
+		2. 마크업안에 float사용한 다음 요소에 빈 <div class="clear"></div> 사용하여 
+		.clear에 clear:both;로 float해제 시키는 방법.
+		*/
+		.box{
+			/* overflow:hidden; */
+			width:100%;
+			height:auto;
+			margin-bottom:40px;
+			padding:10px;
+			background-color:darkturquoise;
+		}
+		.clear{
+			clear:both;
+			width:100%;
+			height:auto;
+			background-color:transparent;
+		}
+		.a{
+			float:left;
+		}
+		.b{
+			float:right;
+		}
+		.c{
+			clear:both;
+			height:200px;
+			background-color:blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="a">a</div>
+		<div class="b">b</div>
+		<div class="clear"></div>
+	</div>
+	<div class="c">c</div>
+</body>
+</html>

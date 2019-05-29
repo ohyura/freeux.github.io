@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Position 기본</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<style>
+		/* Reset */
+		*{
+			margin:0;
+			padding:0;
+			border:0;
+			line-height:1;
+			font-size:13px;
+			color:#222;
+			text-decoration:none;
+			box-sizing:border-box;
+		}
+		/* 
+			position
+			기본 - static
+			상대값 - relative  : 기준은 본인 자신이 됨.
+			절대값 - absolute  : 기준은 부모가 기준이 됨. 부모에 position속성이 없으면 기준은 body가 됨.
+			고정값 - fixed   :  기준(부모)은 body 기준으로 고정됨
+			sticky
+
+			z-index - position의 순서를 제어할 때 사용
+
+			top
+			right
+			bottom
+			left
+		*/
+		section{
+			position:absolute;
+			top:50%;
+			left:50%;
+			width:200px;
+			height:200px;
+			margin:-100px 0 0 -100px;
+			/* border:1px solid #000; */
+		}
+		div{
+			position:absolute;
+			/* top:50%;
+			left:50%; */
+			width:100px;
+			height:100px;
+			min-width:80px;
+			min-height:80px;
+			max-width:150px;
+			max-height:150px;
+			border:1px solid;
+		}
+		.a{
+			/* z-index:1; */
+			border-color:blue;
+		}
+		.b{
+			right:0;
+			/* margin-top:-100px; */
+			border-color:red;
+		}
+		.c{
+			/* top:50%;
+			left:50%;
+			margin-top:-50px;
+			margin-left:-50px; */
+			/* top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			margin:auto; */
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			
+			/* z-index:1;
+			margin-top:-50px;
+			margin-left:-50px; */
+			border-color:palegreen;
+		}
+		.d{
+			right:0;
+			bottom:0;
+			/* margin-left:-100px; */
+			border-color:darkgreen;
+		}
+		.e{
+			bottom:0;
+			left:0;
+			/* margin-top:-100px;
+			margin-left:-100px; */
+			border-color:palevioletred;
+		}
+
+		/* 
+			1. position을 활용 한 가운데 정렬 방법 
+			top:50%;
+			left:50%;
+			margin-top:-50px;
+			margin-left:-50px;
+			2. position을 활용 한 가운데 정렬 방법 
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			margin:auto;
+			3. position을 활용 한 가운데 정렬 방법 
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			transform:translateX(-50%);
+			transform:translateY(-50%);
+			-webkit-transform:translate();
+			-o-transform:translate();
+			-moz-transform:translate();
+			-ms-transform:translate();
+		*/
+	</style>
+</head>
+<body>
+	<section>
+		<div class="a"></div>
+		<div class="b"></div>
+		<div class="c"></div>
+		<div class="d"></div>
+		<div class="e"></div>
+	</section>
+</body>
+</html>

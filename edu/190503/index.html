@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>position 기본</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			border:0;
+			color:#222;
+			font-size:13px;
+			font-style:normal;
+			box-sizing:border-box;
+		}
+		html,body{
+			height:100%;
+		}
+		body{
+			height:1500px;
+		}
+		body::after{
+			content:"";
+			display:block;
+			position:fixed;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			width:1px;
+			height:100%;
+			margin:auto;
+			background-color:#000;
+		}
+		body::before{
+			content:"";
+			display:block;
+			position:fixed;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			width:100%;
+			height:1px;
+			margin:auto;
+			background-color:#000;
+		}
+		div{
+			width:100px;
+			height:100px;
+			border:1px solid #222;
+		}
+		div span{
+			position:relative;
+			top:5px;
+			font-size:30px;
+		}
+		div em{
+
+		}
+		.box{
+			position:relative;
+			top:50px;
+			width:300px;
+			height:300px;
+		}
+		.a{
+			position:absolute;
+			bottom:0;
+			right:0;
+			/* margin:50px 0 0 120px; */
+		}
+		.b{
+			position:relative;
+			top:10px;
+		}
+		.c{
+			position:fixed;
+			margin-top:200px;
+		}
+
+		.position{
+			position:fixed;
+			top:50%;
+			left:50%;
+			width:200px;
+			height:200px;
+			margin-top:-100px;
+			margin-left:-100px;
+		}
+
+		.position div{
+			/* 첫번째 방법 */
+			position:absolute;
+			/* top:50%;
+			left:50%; */
+			/* margin-top:-50px;
+			margin-left:-50px; */
+
+			/* 두번째 방법 */
+			/* position:absolute;
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			margin:auto; */
+
+
+
+
+			z-index:1;
+			/* 
+			position 활용하여 정가운데 정렬시키는 방법
+			1. position:absolute;top:50%;left:50%;width:100px;height:100px;margin:-50px 0 0 -50px;
+			2. position:absolute;top:0;right:0;bottom:0;left:0;width:100px;height:100px;margin:auto;
+			*/
+		}
+		.position .pos1{
+			/* margin-top:-100px;
+			margin-left:-100px; */
+			top:0;
+			left:0;
+			background-color:rgba(241, 175, 175,.5);
+			z-index:3;
+		}
+		.position .pos2{
+			/* margin-left:-100px; */
+			top:0;
+			right:0;
+			background-color:black;
+			z-index:4;
+		}
+		.position .pos3{
+			top:50%;
+			left:50%;
+			margin-top:-50px;
+			margin-left:-50px;
+			background-color:yellow;
+			z-index:5;
+			opacity:.5;
+		}
+		.position .pos4{
+			bottom:0;
+			right:0;
+			/* margin-top:-100px; */
+			background-color:green;
+			z-index:2;
+		}
+		.position .pos5{
+			bottom:0;
+			left:0;
+			background-color:darkmagenta;
+			z-index:1;
+		}
+
+		/* 
+		 [BoxModel]
+		 width + height 
+		 margin + padding + border
+		 width:100px;  // 100 + 10 + 10 + 1 + 1 = 122
+		 margin:10px;
+		 padding:10px;
+		 border:1px solid #000;
+		*/
+	</style>
+</head>
+<body>
+<!-- 
+	참조사이트
+	https://ko.learnlayout.com/
+	https://ofcourse.kr/html-course/
+	https://cssreference.io/
+	http://pxtoem.com/
+	https://www.w3schools.com/
+	-->
+
+	<!-- 
+	position 속성 value(값)종류
+	기본 : static - top,right,bottom,left 이런 좌표값이 무효됩니다.
+	상대 : relative - 현재 자신의 위치에서 기본이 본인이 기준이 됨.
+	절대 : absolute - 부모의 속성이 position이 들어가있는 경우 부모 기준이 됨.
+	고정 : fixed - 부모는 항상 body 기준으로 움직이고 브라우저 위치에 고정 됨.
+	순서제어 : z-index position에서만 사용 가능하며, 단위값은 안들어감. 음수,양수 전부 활용 가능함.
+-->
+	<!-- <div class="box">
+		<div class="a">
+			<span>A</span>
+			<em>1,000</em>
+		</div>
+		<div class="b">b</div>
+		<div class="c">c</div>
+	</div> -->
+
+	<div class="position">
+		<div class="pos1"></div>
+		<div class="pos2"></div>
+		<div class="pos3"></div>
+		<div class="pos4"></div>
+		<div class="pos5"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>레이아웃 구조</title>
+	<style>
+			*{
+				margin: 0;
+				padding: 0;
+				font-size: 13px;
+				box-sizing: border-box;
+			}
+			/* 레이아웃 */
+			.header{
+				width: 800px;
+				margin: 0 auto 20px;
+				padding: 20px;
+				border: 2px dashed #0f6315;
+				background-color: ivory;
+			}
+			.header nav{
+				padding: 20px;
+				border: 2px solid #1dc128;
+			}
+			.main{
+				margin-bottom: 20px;
+				padding: 10px;
+				border: 2px dashed #0f6315;
+				background-color: ivory;
+			}
+			.main::after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			.sidemenu{
+				float: left;
+				width: 150px;
+				height: 500px;
+				margin-right: -100%;
+				padding: 10px;
+				border: 2px dashed #0f6315;
+				background-color: ivory;
+			}
+			.sidemenu header{
+				height: 40px;
+				margin-bottom: 20px;
+				padding: 10px;
+				border: 2px solid #1dc128;
+				background-color: #adcc82;
+			}
+			.sidemenu nav{
+				height: 400px;
+				padding: 10px;
+				border: 2px solid #1dc128;
+				background-color: #adcc82;
+			}
+			.csection{
+				margin-left: 160px;
+				padding: 10px;
+				border: 2px dashed #0f6315;
+			}
+			.csection header{
+				margin-bottom: 10px;
+				padding: 10px;
+				border: 2px solid #1dc128;
+			}
+			.csection article{
+				height: 500px;
+				margin-bottom: 10px;
+				padding: 10px;
+				border: 2px solid #1dc128;
+			}
+			.csection footer{
+				padding: 10px;
+				border: 2px solid #1dc128;
+			}
+			.footer{
+				width: 800px;
+				margin: 0 auto 20px;
+				padding: 20px;
+				border: 2px dashed #0f6315;
+				background-color: ivory;
+			}
+
+	</style>
+</head>
+
+<body>
+	<header class="header">
+		header
+		<nav>
+			nav
+		</nav>
+	</header>
+
+	<main class="main">
+		<section class="sidemenu">
+			<header>
+				header
+			</header>
+			<nav>
+				nav
+			</nav>
+		</section>
+		<section class="csection">
+			<article>
+				article
+			</article>
+			<footer>
+				footer
+			</footer>
+		</section>
+	</main>
+	<footer class="footer">
+		footer
+	</footer>
+</body>
+</html>

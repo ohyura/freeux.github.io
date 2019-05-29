@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>css 기본 구조</title>
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<style>
+		/* 초기화 */
+		*{
+			margin:0;
+			padding:0;
+			border:0;
+			line-height:1;
+			color:#222;
+			font-size:13px;
+			font-style:normal;
+			text-decoration:none;
+			box-sizing:border-box;
+		}
+
+		/* 레이아웃 */
+		div{
+			width:200px;
+		}
+		div{
+			/* hidden,auto,scroll */
+			overflow:auto;
+
+			width:100px;
+			height:50px;
+			margin:10px;
+			padding:20px;
+			border:1px solid #000;
+			/* 100 + 20 + 20 + 1 + 1 = 142 */
+			/* box-sizing:border-box; */
+			width:150px;
+		}
+		.a{
+			/* hidden, visible */
+			visibility:hidden;
+		}
+		.b{
+			/* none, block, inline, inline-block */
+			display:none;
+		}
+		.c{
+
+		}
+	</style>
+</head>
+<body>
+	<!-- 
+		css 불러들이는 방식 4가지
+		- linkd 방식 - 외부에서 css를 불러들이는 방식
+		- internel 방식의 head 안에 style로 지정하는 방식
+		- 인라인 스타일 방식 요소에 직접 style=""로 지정하는 방식
+		- import 방식 @import url(); 로 외부에서 css호출하는 방식
+		<link rel="stylesheet" type="text/css" href="">
+		<style>
+			@import url('css경로');
+
+			*{}
+		</style>
+		<div style=""></div>
+
+		overflow
+		visibility
+		display
+	 -->
+	<div class="a">
+		a HTML은 하이퍼텍스트 마크업 언어(HyperText Markup Language, 문화어: 초본문표식달기언어, 하이퍼본문표식달기언어)라는 의미의 웹 페이지를 위한 지배적인 마크업 언어다.
+	</div>
+	<div class="b">
+		b HTML은 하이퍼텍스트 마크업 언어(HyperText Markup Language, 문화어: 초본문표식달기언어, 하이퍼본문표식달기언어)라는 의미의 웹 페이지를 위한 지배적인 마크업 언어다.
+	</div>
+	<div class="c">
+		c HTML은 하이퍼텍스트 마크업 언어(HyperText Markup Language, 문화어: 초본문표식달기언어, 하이퍼본문표식달기언어)라는 의미의 웹 페이지를 위한 지배적인 마크업 언어다.
+	</div>
+</body>
+</html>

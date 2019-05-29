@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+		font-size:15px;
+		box-sizing:border-box;
+	}
+	.header{
+		width:1100px;
+		margin:0 auto 20px;
+		padding:20px;
+		border:3px solid purple;
+		background-color:palevioletred;
+	}
+	.header nav{
+		padding:10px;
+		border:2px solid yellow;
+		background-color:plum;
+	}
+	.main{
+		margin-bottom:20px;
+		padding:10px;
+		border:3px solid rebeccapurple;
+		background-color:palevioletred;
+	}
+	.main::after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	.sidemenu{
+		float:left;
+		width:150px;
+		height:330px;
+		margin-right:-100%;
+		padding:10px;
+		border:2px solid yellow;
+		background-color:yellowgreen;
+	}
+	.sidemenu header{
+		height:40px;
+		margin-bottom:10px;
+		padding:10px;
+		border:2px solid yellow;
+		background-color:plum;
+	}
+	.sidemenu nav{
+		height:250px;
+		padding:10px;
+		border:2px solid yellow;
+		background-color:plum;
+	}
+	.csection{
+		margin-left:160px;
+		padding:10px;
+		border:2px solid yellow;
+		background-color:yellowgreen;
+	}
+	.csection header{
+		margin-bottom:10px;
+		padding:10px;
+		border:2px solid yellow;
+		background-color:plum;
+	}
+	.csection article{
+		height:300px;
+		margin-bottom:10px;
+		padding:10px;
+		border:2px solid yellow;
+		background-color:plum;
+	}
+	.csection footer{
+		padding:10px;
+		border:2px solid yellow;
+		background-color:plum;
+	}
+	.footer{
+		width:1100px;
+		margin:0 auto 20px;
+		padding:20px;
+		border:3px solid rebeccapurple;
+		background-color:palevioletred;
+	}
+	</style>
+</head>
+<body>
+	<header class="header">
+		header
+		<nav>
+			nav
+		</nav>
+	</header>
+	<main class="main">
+		<section class="sidemenu">
+			<header>
+				header
+			</header>
+			<nav>
+				nav
+			</nav>
+		</section>
+		<section class="csection">
+			<header>
+				header
+			</header>
+			<article>
+				article
+			</article>
+			<footer>
+				footer
+			</footer>
+		</section>
+	</main>
+	<footer class="footer">
+		footer
+	</footer>
+</body>
+</html>

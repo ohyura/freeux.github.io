@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>레이아웃 구조</title>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+		font-size:13px;
+		text-align:center;
+		box-sizing:border-box;
+	}
+	.header{
+		width:600px;
+		margin:0 auto 25px;
+		padding:20px;
+		border:3px solid pink;
+		background-color:red;
+	}
+	.header nav{
+		padding:20px;
+		border:3px solid purple;
+	}
+	.main{
+		margin-bottom:25px;
+		padding:15px;
+		border:3px solid rebeccapurple;
+		background-color: blueviolet;
+	}
+	.main::after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	.sidemenu{
+		float:left;
+		width:100px;
+		height:400px;
+		margin-right:-100%;
+		padding:25px;
+		border:3px solid rebeccapurple;
+		background-color: indianred;
+	}
+	.sidemenu header{
+		height:30px;
+		margin-bottom:20px;
+		padding:10px;
+		border:3px solid gold;
+		background-color:orange;
+	}
+	.sidemenu nav{
+		height:300px;
+		padding:10px;
+		border:3px solid teal;
+		background-color:olive;
+	}
+	.csection{
+		margin-left:100px;
+		padding:10px;
+		border:3px solid fuchsia;
+	}
+	.csection header{
+		margin-bottom:10px;
+		padding:10px;
+		border:3px solid gold;
+	}
+	.csection article{
+		height:300px;
+		margin-bottom:10px;
+		padding:10px;
+		border:3px solid gold;
+	}
+	.csection footer{
+		padding:20px;
+		border:3px solid purple;
+	}
+	.footer{
+		width:700px;
+		margin:0 auto 25px;
+		padding:25px;
+		border:3px solid pink;
+		background-color:red;
+	}
+	</style>
+</head>
+<body>
+	<header class="header">
+		header
+		<nav>
+			nav
+		</nav>
+	</header>
+	<main class="main">
+		main
+		<section class="sidemenu">
+			<header>
+				header
+			</header>
+			<nav>
+				nav
+			</nav>
+		</section>
+		<section class="csection">
+			<header>
+				header
+			</header>
+			<article>
+				article
+			</article>
+			<footer>
+				footer
+			</footer>
+		</section>
+	</main>
+	<footer class="footer">
+		footer
+	</footer>
+</body>
+</html>

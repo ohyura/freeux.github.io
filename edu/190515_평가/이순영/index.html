@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>레이아웃 구조</title>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+		box-sizing:border-box;
+	}
+	.header{
+		/* width:800px; */
+		margin:0 auto 20px;
+		padding:20px;
+		border:2px solid #222;
+		background-color:pink;
+	}
+	.header nav{
+		padding:20px;
+		border:2px solid firebrick;
+		}
+	.main{
+		margin-bottom:20px;
+		padding:10px;
+		border:2px solid royalblue;
+		background-color:slategrey;
+	}
+	.main::after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	.sidemenu{
+		float:left;
+		width:150px;
+		height:300px;
+		margin-right:-100%;
+		padding:10px;
+		border:2px solid red;
+		background-color:ivory;
+	}
+	.sidemenu header{
+		height:40px;
+		margin-bottom:20px;
+		padding:10px;
+		border-bottom:2px solid green;
+		background-color:blue;
+	}
+	.sidemenu nav{
+		height:150px;
+		margin-bottom:10px;
+		border: 2px solid grey;
+		background-color:plum;
+	}
+	.csection{
+		margin-left:160px;
+		padding:10px;
+		background-color:gold;
+		height:500px;
+	}
+	.csection header{
+		padding:30px;
+		margin-bottom:30px;
+		background-color:saddlebrown;
+	}
+	.csection article{
+		padding:130px;
+		margin-bottom:30px;
+		background-color:aqua;
+	}
+	.csection footer{
+		padding:30px;
+		background-color:darkblue;
+	}
+	.footer{
+		height:80px;
+		background-color:violet;
+	}
+	</style>
+</head>
+
+<body>
+	<header class="header">
+		<nav class="nav"></nav>
+	</header>
+
+	<main class="main">
+		<section class="sidemenu">
+			<header></header>
+			<nav></nav>
+		</section>
+		
+		<section class="csection">
+			<header></header>
+			<article></article>
+			<footer></footer>
+		</section>
+
+	</main>
+	<footer class="footer"></footer>
+</body>
+</html>

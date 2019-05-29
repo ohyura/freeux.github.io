@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>html5요소를 활용한 레이아웃</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<style>
+	/* reset */
+	*{
+		margin:0;
+		padding:0;
+		color:#222;
+		font-size:13px;
+		box-sizing:border-box;
+	}
+	.clear{
+		clear:both;
+		width:100%;
+		height:auto;
+	}
+
+	/* layout */
+	.wrap{
+		padding:20px;
+		background-color:gray;
+		text-align:center;
+	}
+	.wrap *{
+		margin-bottom:10px;
+		padding:10px;
+		border:1px solid #222;
+		background-color:#fff;
+	}
+	.header{
+		min-height:100px;
+	}
+	.nav{
+		min-height:40px;
+	}
+	.container{
+		overflow:hidden;
+	}
+	.main{
+		overflow:hidden;
+		position:relative;
+		padding:10px;
+	}
+	.main span{
+		position:absolute;
+		top:5px;
+		left:50%;
+		transform:translateX(-50%);
+	}
+	.main .article{
+		width:49%;
+		min-height:80px;
+		padding:1%;
+	}
+	.main .fleft{
+		float:left;
+	}
+	.main .fright{
+		float:right;
+	}
+	.section{
+		float:left;
+		width:49%;
+		padding:1%;
+	}
+	.section .article{
+		min-height:209px;
+	}
+	.aside{
+		float:right;
+		width:49%;
+		padding:1%;
+	}
+	.figure{
+
+	}
+	.imgbox{
+		min-height:100px;
+	}
+	.figcaption{
+		min-height:50px;
+	}
+	.footer{
+		min-height:60px;
+		margin-bottom:0;
+	}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header class="header">header</header>
+		<nav class="nav">nav</nav>
+		<main class="container">
+			<main class="main"><span>main</span>
+				<article class="article fleft">article</article>
+				<article class="article fright">article</article>
+			</main>
+			<section class="section">section
+				<article class="article">article</article>
+			</section>
+			<aside class="aside">aside
+				<figure class="figure">
+					figure
+					<div class="imgbox">img</div>
+					<figcaption class="figcaption">
+						figcaption
+					</figcaption>
+				</figure>
+			</aside>
+			<!-- <div class="clear"></div> -->
+		</main>
+		<footer class="footer">footer</footer>
+	</div>
+</body>
+</html>
